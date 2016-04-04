@@ -16,12 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+#define appViewWith   90
+#define appViewHeight 90
+#define colCount      3
+#define startY        30
+    CGFloat marginX=(self.view.bounds.size.width-appViewWith*colCount)/(colCount+1);
+    CGFloat marginY=10;
+    for (int i=0; i<10; i++) {
+        int row=i/colCount;
+        int col=i%colCount;
+        CGFloat X=marginX+col*(marginX+appViewWith);
+        CGFloat Y=startY+row*(marginY+appViewHeight);
+        UIView* view=[[UIView alloc]initWithFrame:CGRectMake(X, Y, appViewWith,appViewHeight)];
+        view.backgroundColor=[UIColor redColor];
+        [self.view addSubview:view];
+    }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
