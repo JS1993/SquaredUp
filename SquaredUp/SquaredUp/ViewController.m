@@ -11,23 +11,23 @@
 @interface ViewController ()
 @property(nonatomic,strong)NSArray* imageList;
 @end
-
-@implementation ViewController
--(NSArray *)imageList{
-    if (_imageList==nil) {
-        _imageList=[AppInfo appList];
-    }
-    return _imageList;
-}
-- (void)viewDidLoad {
-    [super viewDidLoad];
 #define appViewWith   90
 #define appViewHeight 90
 #define colCount      3
 #define startY        30
+@implementation ViewController
+-(NSArray *)imageList{
+    if (_imageList==nil) {
+        _imageList=[AppInfo appList];
+    } 
+    return _imageList;
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     CGFloat marginX=(self.view.bounds.size.width-appViewWith*colCount)/(colCount+1);
     CGFloat marginY=10;
-    for (int i=0; i<12; i++) {
+    for (int i=0; i<self.imageList.count; i++) {
         int row=i/colCount;
         int col=i%colCount;
         CGFloat X=marginX+col*(marginX+appViewWith);
@@ -54,7 +54,34 @@
         [button setBackgroundImage:[UIImage imageNamed:@"buttongreen"] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:@"buttongreen_highlighted"] forState:UIControlStateHighlighted];
         button.titleLabel.font=[UIFont systemFontOfSize:12.0];
+        button.tag=i;
+        [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
         [view addSubview:button];
     }
 }
+-(void)click:(UIButton*)button{
+    AppInfo* appInfo=self.imageList[button.tag];
+    UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height-30, self.view.bounds.size.width, 30)];
+    label.text=appInfo.name;
+    label.backgroundColor=[UIColor colorWithWhite:0.0 alpha:0.2];
+    label.textAlignment=NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    //设置动画初始值
+    button.enabled=NO;
+    label.alpha=0;
+    /**
+     *  动画
+     */
+    [UIView animateWithDuration:1.0f animations:^{
+        label.alpha=1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1.0f animations:^{
+            label.alpha=0;
+        } completion:^(BOOL finished) {
+            button.enabled=YES;
+            [label removeFromSuperview];
+        }];
+    }];
+}
+
 @end
