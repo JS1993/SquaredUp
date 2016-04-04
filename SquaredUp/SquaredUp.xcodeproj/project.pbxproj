@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF810B8D1CB254F0004E485B /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF810B8C1CB254F0004E485B /* AppInfo.m */; };
 		CF8CB3E31CB1F26800DF8028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3E21CB1F26800DF8028 /* main.m */; };
 		CF8CB3E61CB1F26800DF8028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3E51CB1F26800DF8028 /* AppDelegate.m */; };
 		CF8CB3E91CB1F26800DF8028 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3E81CB1F26800DF8028 /* ViewController.m */; };
 		CF8CB3EC1CB1F26800DF8028 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8CB3EA1CB1F26800DF8028 /* Main.storyboard */; };
-		CF8CB3EF1CB1F26800DF8028 /* SquaredUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3ED1CB1F26800DF8028 /* SquaredUp.xcdatamodeld */; };
 		CF8CB3F11CB1F26800DF8028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8CB3F01CB1F26800DF8028 /* Assets.xcassets */; };
 		CF8CB3F41CB1F26800DF8028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8CB3F21CB1F26800DF8028 /* LaunchScreen.storyboard */; };
 		CF8CB3FF1CB1F26800DF8028 /* SquaredUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3FE1CB1F26800DF8028 /* SquaredUpTests.m */; };
@@ -49,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF810B8B1CB254F0004E485B /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		CF810B8C1CB254F0004E485B /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		CF8CB3DE1CB1F26800DF8028 /* SquaredUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquaredUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8CB3E21CB1F26800DF8028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF8CB3E41CB1F26800DF8028 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 		CF8CB3E71CB1F26800DF8028 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CF8CB3E81CB1F26800DF8028 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF8CB3EB1CB1F26800DF8028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF8CB3EE1CB1F26800DF8028 /* SquaredUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquaredUp.xcdatamodel; sourceTree = "<group>"; };
 		CF8CB3F01CB1F26800DF8028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF8CB3F31CB1F26800DF8028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF8CB3F51CB1F26800DF8028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +138,6 @@
 				CF8CB3F01CB1F26800DF8028 /* Assets.xcassets */,
 				CF8CB3F21CB1F26800DF8028 /* LaunchScreen.storyboard */,
 				CF8CB3F51CB1F26800DF8028 /* Info.plist */,
-				CF8CB3ED1CB1F26800DF8028 /* SquaredUp.xcdatamodeld */,
 				CF8CB3E11CB1F26800DF8028 /* Supporting Files */,
 			);
 			path = SquaredUp;
@@ -148,6 +148,8 @@
 			children = (
 				CF8CB4171CB20ACB00DF8028 /* app.plist */,
 				CF8CB3E21CB1F26800DF8028 /* main.m */,
+				CF810B8B1CB254F0004E485B /* AppInfo.h */,
+				CF810B8C1CB254F0004E485B /* AppInfo.m */,
 				CF8CB4191CB20AD200DF8028 /* Icons */,
 			);
 			name = "Supporting Files";
@@ -336,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8CB3EF1CB1F26800DF8028 /* SquaredUp.xcdatamodeld in Sources */,
+				CF810B8D1CB254F0004E485B /* AppInfo.m in Sources */,
 				CF8CB3E91CB1F26800DF8028 /* ViewController.m in Sources */,
 				CF8CB3E61CB1F26800DF8028 /* AppDelegate.m in Sources */,
 				CF8CB3E31CB1F26800DF8028 /* main.m in Sources */,
@@ -481,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SquaredUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.SquaredUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SquaredUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.SquaredUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,6 +567,7 @@
 				CF8CB4101CB1F26800DF8028 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF8CB4111CB1F26800DF8028 /* Build configuration list for PBXNativeTarget "SquaredUpTests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +576,7 @@
 				CF8CB4131CB1F26800DF8028 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF8CB4141CB1F26800DF8028 /* Build configuration list for PBXNativeTarget "SquaredUpUITests" */ = {
 			isa = XCConfigurationList;
@@ -579,21 +585,9 @@
 				CF8CB4161CB1F26800DF8028 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CF8CB3ED1CB1F26800DF8028 /* SquaredUp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CF8CB3EE1CB1F26800DF8028 /* SquaredUp.xcdatamodel */,
-			);
-			currentVersion = CF8CB3EE1CB1F26800DF8028 /* SquaredUp.xcdatamodel */;
-			path = SquaredUp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CF8CB3D61CB1F26700DF8028 /* Project object */;
 }

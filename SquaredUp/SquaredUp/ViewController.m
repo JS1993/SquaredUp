@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AppInfo.h"
 @interface ViewController ()
 @property(nonatomic,strong)NSArray* imageList;
 @end
@@ -15,7 +15,13 @@
 @implementation ViewController
 -(NSArray *)imageList{
     if (_imageList==nil) {
-        _imageList=[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"app" ofType:@"plist"]];
+        NSArray* array =[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"app" ofType:@"plist"]];
+        NSMutableArray* arrM=[NSMutableArray array];
+        for (NSDictionary* dict in array) {
+            AppInfo* appInfo=[AppInfo appInfoWithDictionary:dict];
+            [arrM addObject:appInfo];
+        }
+        _imageList=arrM;
     }
     return _imageList;
 }
@@ -34,16 +40,16 @@
         CGFloat Y=startY+row*(marginY+appViewHeight);
         UIView* view=[[UIView alloc]initWithFrame:CGRectMake(X, Y, appViewWith,appViewHeight)];
         [self.view addSubview:view];
-        NSDictionary* dic=self.imageList[i];
+        AppInfo* appInfo=self.imageList[i];
         //添加图片
         UIImageView* imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, appViewWith, 50)];
-        UIImage* image=[UIImage imageNamed:dic[@"icon"]];
+        UIImage* image=[UIImage imageNamed:appInfo.icon];
         imageView.image=image;
         imageView.contentMode=UIViewContentModeScaleAspectFit;
         [view addSubview:imageView];
         //添加标签
         UILabel* label=[[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), appViewWith, 20)];
-        label.text=dic[@"name"];
+        label.text=appInfo.name;
         label.font=[UIFont systemFontOfSize:13.0];
         label.textAlignment=NSTextAlignmentCenter;
         [view addSubview:label];
