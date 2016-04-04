@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2483B11CB2A30700191913 /* AppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2483B01CB2A30700191913 /* AppView.xib */; };
+		CF2483B41CB2A35600191913 /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2483B31CB2A35600191913 /* AppView.m */; };
 		CF810B8D1CB254F0004E485B /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF810B8C1CB254F0004E485B /* AppInfo.m */; };
 		CF8CB3E31CB1F26800DF8028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3E21CB1F26800DF8028 /* main.m */; };
 		CF8CB3E61CB1F26800DF8028 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8CB3E51CB1F26800DF8028 /* AppDelegate.m */; };
@@ -49,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF2483B01CB2A30700191913 /* AppView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppView.xib; sourceTree = "<group>"; };
+		CF2483B21CB2A35600191913 /* AppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
+		CF2483B31CB2A35600191913 /* AppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 		CF810B8B1CB254F0004E485B /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
 		CF810B8C1CB254F0004E485B /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		CF8CB3DE1CB1F26800DF8028 /* SquaredUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquaredUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +155,9 @@
 				CF8CB3E21CB1F26800DF8028 /* main.m */,
 				CF810B8B1CB254F0004E485B /* AppInfo.h */,
 				CF810B8C1CB254F0004E485B /* AppInfo.m */,
+				CF2483B21CB2A35600191913 /* AppView.h */,
+				CF2483B31CB2A35600191913 /* AppView.m */,
+				CF2483B01CB2A30700191913 /* AppView.xib */,
 				CF8CB4191CB20AD200DF8028 /* Icons */,
 			);
 			name = "Supporting Files";
@@ -311,6 +319,7 @@
 				CF8CB42C1CB20AD200DF8028 /* icon_06.png in Resources */,
 				CF8CB42A1CB20AD200DF8028 /* icon_04.png in Resources */,
 				CF8CB42F1CB20AD200DF8028 /* icon_09.png in Resources */,
+				CF2483B11CB2A30700191913 /* AppView.xib in Resources */,
 				CF8CB3EC1CB1F26800DF8028 /* Main.storyboard in Resources */,
 				CF8CB4301CB20AD200DF8028 /* icon_10.png in Resources */,
 				CF8CB42E1CB20AD200DF8028 /* icon_08.png in Resources */,
@@ -340,6 +349,7 @@
 			files = (
 				CF810B8D1CB254F0004E485B /* AppInfo.m in Sources */,
 				CF8CB3E91CB1F26800DF8028 /* ViewController.m in Sources */,
+				CF2483B41CB2A35600191913 /* AppView.m in Sources */,
 				CF8CB3E61CB1F26800DF8028 /* AppDelegate.m in Sources */,
 				CF8CB3E31CB1F26800DF8028 /* main.m in Sources */,
 			);
