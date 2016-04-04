@@ -15,13 +15,7 @@
 @implementation ViewController
 -(NSArray *)imageList{
     if (_imageList==nil) {
-        NSArray* array =[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"app" ofType:@"plist"]];
-        NSMutableArray* arrM=[NSMutableArray array];
-        for (NSDictionary* dict in array) {
-            AppInfo* appInfo=[AppInfo appInfoWithDictionary:dict];
-            [arrM addObject:appInfo];
-        }
-        _imageList=arrM;
+        _imageList=[AppInfo appList];
     }
     return _imageList;
 }

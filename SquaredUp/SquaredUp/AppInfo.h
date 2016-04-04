@@ -13,4 +13,5 @@
 @property(nonatomic,copy)NSString* icon;
 -(id)initWithDict:(NSDictionary*)dictionary;
 +(instancetype)appInfoWithDictionary:(NSDictionary*)dictionary;
++(NSArray*)appList;
 @end

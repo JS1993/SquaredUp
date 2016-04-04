@@ -12,12 +12,23 @@
 -(id)initWithDict:(NSDictionary *)dictionary{
     self=[super init];
     if (self) {
-        self.name=dictionary[@"name"];
-        self.icon=dictionary[@"icon"];
+        /**
+         *  KVC
+         */
+        [self setValuesForKeysWithDictionary:dictionary];
     }
     return self;
 }
 +(instancetype)appInfoWithDictionary:(NSDictionary*)dictionary {
     return  [[self alloc]initWithDict:dictionary];
+}
++(NSArray *)appList{
+    NSArray* array =[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"app" ofType:@"plist"]];
+    NSMutableArray* arrM=[NSMutableArray array];
+    for (NSDictionary* dict in array) {
+        AppInfo* appInfo=[AppInfo appInfoWithDictionary:dict];
+        [arrM addObject:appInfo];
+    }
+    return arrM;
 }
 @end
